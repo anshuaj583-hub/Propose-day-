@@ -4,37 +4,51 @@
   <meta charset="UTF-8">
   <title>Happy Propose Day 💕</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
-
   <style>
+    @font-face {
+      font-family: 'Bromello';
+      src: url('bromello.ttf') format('truetype');
+    }
+
     body {
       margin: 0;
       height: 100vh;
-      background: #ffd6e8; /* baby pink */
+      background-color: #ffd6dc; /* baby pink */
       display: flex;
-      justify-content: center;
       align-items: center;
-      font-family: 'Dancing Script', cursive;
+      justify-content: center;
+      font-family: 'Bromello', cursive;
     }
 
-    .card {
-      background: #fff;
-      padding: 35px 25px;
-      border-radius: 25px;
-      width: 90%;
-      max-width: 420px;
+    #app {
       text-align: center;
-      box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3);
-      animation: fadeIn 0.6s ease;
+      padding: 30px;
+      color: rgba(249, 127, 130, 1);
     }
 
-    h1 {
-      font-size: 30px;
-      color: #ff4d88;
-      margin-bottom: 25px;
-      line-height: 1.4;
+    #question {
+      font-size: 3.2rem;
+      margin-bottom: 40px;
     }
+
+    button {
+      font-family: 'Bromello', cursive;
+      font-size: 2.2rem;
+      padding: 14px 40px;
+      margin: 10px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .yes {
+      background-color: rgba(249, 127, 130, 0.2);
+      color: rgba(249, 127, 130, 1);
+    }
+
+    .yes:hover {
+      background-color: rgba(249, 127, 130, 0.35);    }
 
     button {
       padding: 12px 28px;
