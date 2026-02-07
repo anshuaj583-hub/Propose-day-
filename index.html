@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Propose Day 💕</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #ffd6e8; /* baby pink */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .card {
+      background: #fff;
+      padding: 35px 25px;
+      border-radius: 25px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3);
+      animation: fadeIn 0.6s ease;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #ff4d88;
+      margin-bottom: 25px;
+      line-height: 1.4;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .yes {
+      background: #ff4d88;
+      color: #fff;
+    }
+
+    .no {
+      background: #ffe6f0;
+      color: #ff4d88;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      margin-top: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card" id="app">
+    <h1 id="question">Do you want me annoying you for life? 😌</h1>
+
+    <button class="yes" onclick="nextQuestion()">Yes 💕</button>
+    <button class="no" onclick="nextQuestion()">No 🙈</button>
+  </div>
+
+  <script>
+    const questions = [
+      "Do you want me annoying you for life? 😌",
+      "Will you let me win arguments? 😏",
+      "Will you stay when things get hard? 🥹",
+      "Will you hold my hand through everything? 🤍",
+      "Can I grow old with you? ♾️💕"
+    ];
+
+    let current = 0;
+
+    function nextQuestion() {
+      current++;
+
+      if (current < questions.length) {
+        document.getElementById("question").innerText = questions[current];
+      } else {
+        document.getElementById("app").innerHTML = `
+          <h1>Love you baby 💕</h1>
+          <h1>Happy Propose Day 💍✨</h1>
+          <img src="https://media.giphy.com/media/3oriO6qJiXajN0TyDu/giphy.gif">
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
