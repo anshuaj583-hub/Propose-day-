@@ -1,122 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Happy Propose Day 💕</title>
+  <meta charset="UTF-8" />
+  <title>Promise Day 💍</title>
+
+  <!-- Cute font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
   <style>
-    @font-face {
-      font-family: 'Bromello';
-      src: url('bromello.ttf') format('truetype');
-    }
-
     body {
       margin: 0;
-      height: 100vh;
-      background-color: #ffd6dc; /* baby pink */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Bromello', cursive;
-    }
-
-    #app {
-      text-align: center;
-      padding: 30px;
-      color: rgba(249, 127, 130, 1);
-    }
-
-    #question {
-      font-size: 3.2rem;
-      margin-bottom: 40px;
-    }
-
-    button {
-      font-family: 'Bromello', cursive;
-      font-size: 2.2rem;
-      padding: 14px 40px;
-      margin: 10px;
-      border: none;
-      border-radius: 40px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    .yes {
-      background-color: rgba(249, 127, 130, 0.2);
-      color: rgba(249, 127, 130, 1);
-    }
-
-    .yes:hover {
-      background-color: rgba(249, 127, 130, 0.35);    }
-
-    button {
-      padding: 12px 28px;
-      font-size: 18px;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      margin: 10px;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffd6e0, #fff0f5);
       font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: #5a2a4d;
     }
 
-    .yes {
-      background: #ff4d88;
-      color: #fff;
+    .container {
+      margin-top: 80px;
+      padding: 20px;
     }
 
-    .no {
-      background: #ffe6f0;
-      color: #ff4d88;
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 48px;
+      margin-bottom: 20px;
     }
 
-    img {
-      max-width: 100%;
-      border-radius: 20px;
-      margin-top: 15px;
+    .promise-box {
+      background: white;
+      width: 80%;
+      max-width: 400px;
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 18px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
+    .heart {
+      font-size: 30px;
+      margin-top: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
-
 <body>
 
-  <div class="card" id="app">
-    <h1 id="question">Do you want me annoying you for life? 😌</h1>
+  <div class="container">
+    <h1>My Promises to You 💍</h1>
 
-    <button class="yes" onclick="nextQuestion()">Yes 💕</button>
-    <button class="no" onclick="nextQuestion()">No 🙈</button>
+    <div class="promise-box">I promise to always stand by you.</div>
+    <div class="promise-box">I promise to listen and understand you.</div>
+    <div class="promise-box">I promise to support your dreams.</div>
+    <div class="promise-box">I promise to be honest and loyal.</div>
+    <div class="promise-box">I promise to choose you every day.</div>
+
+    <div class="heart">❤️</div>
   </div>
 
-  <script>
-    const questions = [
-      "Do you want me annoying you for life? 😌",
-      "Will you let me win arguments? 😏",
-      "Will you stay when things get hard? 🥹",
-      "Will you hold my hand through everything? 🤍",
-      "Can I grow old with you? ♾️💕"
-    ];
-
-    let current = 0;
-
-    function nextQuestion() {
-      current++;
-
-      if (current < questions.length) {
-        document.getElementById("question").innerText = questions[current];
-      } else {
-        document.getElementById("app").innerHTML = `
-          <h1>Love you baby 💕</h1>
-          <h1>Happy Propose Day 💍✨</h1>
-          <img src="https://media.giphy.com/media/3oriO6qJiXajN0TyDu/giphy.gif">
-        `;
-      }
-    }
-  </script>
-
 </body>
-</html>
+  </html>
